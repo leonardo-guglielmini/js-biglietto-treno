@@ -1,20 +1,21 @@
 console.log("Esercizio Biglietto del treno")
 
-let userAge = parseInt(prompt("Inserisci la tua età: "))
-
-while(isNaN(userAge) || userAge === 0 )
-{
-    alert("Attenzione, non hai inserito un numero valido!")
+do{
     userAge = parseInt(prompt("Inserisci la tua età: "))
-}
-//console.log(userAge)
-
-let totalKm = parseInt(prompt("Inserisci il numero di chilometri del tuo viaggio: "))
-while(isNaN(totalKm) || totalKm === 0 )
+    if(isNaN(userAge)|| userAge === 0)
     {
         alert("Attenzione, non hai inserito un numero valido!")
-        totalKm = parseInt(prompt("Inserisci il numero di chilometri del tuo viaggio: "))
     }
+
+} while(isNaN(userAge) || userAge === 0 )
+//console.log(userAge)
+
+do{
+    totalKm = parseInt(prompt("Inserisci il numero di chilometri del tuo viaggio: "))
+    if(isNaN(totalKm) || totalKm === 0){
+        alert("Attenzione, non hai inserito un numero valido!")
+    }
+}while(isNaN(totalKm) || totalKm === 0 )
 //console.log(totalKm)
 
 let priceKm = 0.21

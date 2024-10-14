@@ -37,7 +37,11 @@ console.log(message)
 
 console.log("BONUS")
 //replica in sole 3 righe di codice (senza il controllo sulle variabili in ingresso)
-
+/*
 let userAge=parseInt(prompt("Inserisci la tua età: "))
 let totalKm=parseInt(prompt("Inserisci il numero di chilometri totali: "))
 console.log(`Il costo totale del biglietto è: ${(userAge < 18 ? (totalKm*0.21-((totalKm*0.21*20)/100)) : userAge > 65 ? (totalKm*0.21-((totalKm*0.21*40)/100)) : ((totalKm*0.21))).toFixed(2)}`)
+*/
+
+//replica in 1 sola riga di codice (senza il controllo sulle variabili in ingresso)
+console.log(`Il costo totale del biglietto è: ${((userAge=prompt("Inserisci la tua età: "), totalKm=prompt("Inserisci il numero di chilometri totali: "), basePrice=totalKm*0.21)*(userAge < 18 ? (80/100) : userAge > 65 ? (60/100) : 1)).toFixed(2)}`);
